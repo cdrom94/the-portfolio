@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A 3D web prototype inspired by New York weather on a wild day.">
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="wind/wind.css">
+    <title>Sadia Romain | Wind</title>
+</head>
+<body>
+    <div id="loading"></div>
+    <div id="cursor">
+        <div id="blur"></div>
+    </div>
+    <h1>/wind/ the observable natural movement of air, particularly in the form of a current of air blowing from a distinct direction.</h1>
+    <div class="item"></div>
+    <div class="hero-title">Exhale</div>
+    <div id="orange"></div>
+    <marquee behavior="" direction="">Sometime I wonder why I walk alone on this cold, windy road. Maybe I have no one to love or no one love me at all? --Ishmael Emmanuel Balfour</marquee>
+    <script src="wind/cursor.js"></script>
+    <script src="wind/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="wind/hover.js"></script>
+    <script src="wind/GLTFLoader.js"></script>
+    <script src="wind/wind.js"></script>
+    <script>
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.item'),
+            intensity1: 0.7,
+            intensity2: 0.1,
+            angle: Math.PI / 200,
+            speedOut: 1.5,
+            speedIn: 5,
+            imagesRatio: 699/466,
+            image1: "wind/img1.jpeg",
+            image2: "wind/img2.jpeg",
+            displacementImage: 'wind/disp.png'
+        });
+    </script>
+</body>
+</html>

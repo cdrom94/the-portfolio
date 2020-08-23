@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/projects/wooly/static/css/main.284fa5c1.chunk.css",
+    "main.js": "/projects/wooly/static/js/main.e07e0414.chunk.js",
+    "main.js.map": "/projects/wooly/static/js/main.e07e0414.chunk.js.map",
+    "runtime-main.js": "/projects/wooly/static/js/runtime-main.fd9b9685.js",
+    "runtime-main.js.map": "/projects/wooly/static/js/runtime-main.fd9b9685.js.map",
+    "static/js/2.b49a4f6e.chunk.js": "/projects/wooly/static/js/2.b49a4f6e.chunk.js",
+    "static/js/2.b49a4f6e.chunk.js.map": "/projects/wooly/static/js/2.b49a4f6e.chunk.js.map",
+    "index.html": "/projects/wooly/index.html",
+    "precache-manifest.f00560bd47fb212c3e93bfdf379db4f2.js": "/projects/wooly/precache-manifest.f00560bd47fb212c3e93bfdf379db4f2.js",
+    "service-worker.js": "/projects/wooly/service-worker.js",
+    "static/css/main.284fa5c1.chunk.css.map": "/projects/wooly/static/css/main.284fa5c1.chunk.css.map",
+    "static/js/2.b49a4f6e.chunk.js.LICENSE.txt": "/projects/wooly/static/js/2.b49a4f6e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd9b9685.js",
+    "static/js/2.b49a4f6e.chunk.js",
+    "static/css/main.284fa5c1.chunk.css",
+    "static/js/main.e07e0414.chunk.js"
+  ]
+}

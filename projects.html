@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="New York. Frontend Developer. Sadia Romain.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <link rel="stylesheet" type="text/css" href="decolines.css"/>
+    <noscript>
+        <style>
+            #content {
+                visibility: visible;
+            }
+        </style>
+    </noscript>
+    <title>Sadia Romain | Projects</title>
+</head>
+<body>
+    <h1><a href="index">SR</a></h1>
+    <nav id="hightlight-yellow">
+        <a href="projects" class="current-page">Projects</a>
+        <a href="https://github.com/cdrom94" target='_blank' rel="noreferrer">Github&raquo;</a>
+        <a href="https://photocollectionpending.wordpress.com/" target='_blank' rel="noreferrer">Photography&raquo;</a>
+        <a href="contact">Contact</a>
+    </nav>
+    <div id="content">
+        <div id="archi" class="tab">
+            <a class="project" href="projects/archi">
+                <img src="projects/archi/archi.jpg" alt="">
+                <h2>archi;</h2>
+                <h3>architectural catalog</h3>
+                <p class="tech">React, React Router, FramerMotion</p>
+                <p>An homage to modern architectural marvels. Images sourced from Unsplash and Pixabay.</p>
+            </a>
+        </div>
+        <div id="woodland" class="tab">
+            <a class="project" href="projects/woodland">
+                <img src="projects/woodland/woodland.jpg" alt="">
+                <h2>woodland;</h2>
+                <h3>A-frame VR</h3>
+                <p class="tech">HTML, A-frame, Blender</p>
+                <p>Virtual reality experiment.</p>
+                <p class="attribution"><a target="_blank" href="https://freesound.org/people/InspectorJ/sounds/352514/">Original audio produced by InspectorJ</a>.</p>
+                <p>Three-dimensional figures modeled in Blender.</p>
+                <p>Use WASD keys and mouse drags to navigate.</p>
+                <p>Use the target cursor with mouse clicks to play the silver drums.</p>
+            </a>
+        </div>
+        <div id="linegraph" class="tab">
+            <a class="project" href="projects/linegraph">
+                <img src="projects/linegraph/linegraph.jpg" alt="">
+                <h2>linegraph;</h2>
+                <h3>D3 visualization</h3>
+                <p class="tech">HTML, CSS, JavaScript, D3.js</p>
+                <p>Data visualization of annual Dutch immigration statistics per birth continent from 1995 to 2019. Information provided by the Centraal Bureau voor de Statistiek (CBS).</p>
+            </a>
+        </div>
+        <div id="wooly" class="tab">
+            <a class="project" href="projects/wooly">
+                <img src="projects/wooly/wooly.jpg" alt="">
+                <h2>wooly;</h2>
+                <h3>knit tracker</h3>
+                <p class="tech">HTML, CSS, JavaScript, React.js</p>
+                <p>A knitting management tool developed with React (with Hooks -- no pun)! For every time a knitter has forgotten which row they were knitting and which stitch was next. All input is saved to Local Storage for convenience.</p>
+            </a>
+        </div>
+        <div id="wind" class="tab">
+            <a class="project" href="projects/wind">
+                <img src="projects/wind/wind.jpg" alt="">
+                <h2>wind;</h2>
+                <h3>a prototype</h3>
+                <p class="tech">HTML, CSS, JavaScript, Three.js, Blender</p>
+                <p>Inspired by New York weather on a wild day. Three-dimensional model "hand-made" with Blender. Photos by </p>
+                <p class="attribution"><a target="_blank" href="https://unsplash.com/@fiercelupus">Fulvio Ambrosanio</a> and <a target="_blank" href="https://unsplash.com/@byfoul">Frankie Cordoba</a>.</p>
+            </a>
+        </div>
+        <div id="kurrenci" class="tab">
+            <a class="project" href="projects/kurrenci">
+                <img src="projects/kurrenci/kurrenci.jpg" alt="">
+                <h2>kurrenci;</h2>
+                <h3>currency converter</h3>
+                <p class="tech">HTML, CSS, JavaScript</p>
+                <p> The Kurrenci app, powered by ExchangeRate-API, exports up to 50 indicative currency conversions per input. The app features imagery akin to vibrant bank notes, specifically the Australian variety.</p>
+                <p>Currency exchange rates are updated daily.</p>
+            </a>
+        </div>
+        <div id="icarus" class="tab">
+            <a class="project" href="projects/icarus">
+                <img src="projects/icarus/icarus.jpg" alt="">
+                <h2>icarus;</h2>
+                <h3>weather dashboard</h3>
+                <p class="tech">HTML, CSS, JavaScript, GSAP, Three.js</p>
+                <p>Inspired by the classic Greek myth centered around the son of Daedalus, the atmosphere of the Icarus app depicts a digital rendition of Icarus's view over Earth preceding his fate.</p>
+                <p class="attribution"><a target="_blank" href="https://freesound.org/people/klankbeeld/sounds/137109/">Original audio</a> produced by <a target="_blank" href="https://freesound.org/people/klankbeeld/">klankbeeld</a>, licensed under <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <p>The app requires geolocation sharing and displays geographical coordinates, region, temperature, weather forecast and local time data.</p>
+            </a>
+        </div>
+    </div>
+    <footer></footer>
+	<div id="container"></div>
+    <script src="animemod.js"></script>
+    <script src="gsapmod.js"></script>
+    <script src="main.js"></script>
+    <script src="appear.js"></script>
+    <script>
+        TweenLite.to("#content", {autoAlpha: 1, y: -50, duration: 2, delay: 0.25});
+    </script>
+</body>
+</html>
