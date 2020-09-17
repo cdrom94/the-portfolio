@@ -1,4 +1,3 @@
-// document.querySelector('#amount').addEventListener()
 function showLabel(selection, field) {
     document.querySelector(field).value !== "" ? 
     document.querySelector(selection).style.visibility = 'visible'
@@ -43,6 +42,7 @@ var currencyObj =
     JPY: {name: 'Japanese Yen', region: 'Japan'},
     KRW: {name: 'South Korean Won', region: 'Korea'},
     KZT: {name: 'Kazakhstani Tenge', region: 'Kazakhstan'},
+    MVR: {name: 'Maldivian Rufiyaa', region: 'Maldives'},
     MXN: {name: 'Mexican Peso', region: 'Mexico'},
     MYR: {name: 'Malaysian Ringgit', region: 'Malaysia'},
     NOK: {name: 'Norwegian Krone', region: 'Norway'},
@@ -65,28 +65,23 @@ var currencyObj =
     USD: {name: 'US Dollar', region: 'United States'},
     UYU: {name: 'Uruguayan Peso', region: 'Uruguay'},
     ZAR: {name: 'South African Rand', region: 'South Africa'}};
+
 dropdownObj(currencyObj);
-//make sure input is valid, number is not too long
+
 function conversion() {
-    var amount = document.querySelector('#amount').value,
-        currency = document.querySelector('#currency').value;
-    // fetch( "../.netlify/functions/token-hider/token-hider" + '/latest/' + currency)
-    // fetch(  "https://v6.exchangerate-api.com/v6/" + process.env.API_TOKEN + '/latest/' + currency)
-    fetch( ".../.netlify/functions/token-hider/token-hider.js")
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            updateDOM(amount, data);
-        })
-        .catch(() => {
-            document.querySelector('#results').innerHTML = 'Sorry. There was an error, please try again later.'; 
-        });
+    var amount = document.querySelector('#amount').value;
+    var currency = document.querySelector('#currency').value;
+
+    fetch( `/.netlify/functions/token-hider/?currency=${currency}` )
+        .then(response => response.json())
+        .then(data => updateDOM(amount, data))
+        .catch(err => document.querySelector('#results').innerHTML = 'Sorry. There was an error, please try again later.')
 }
+
 function updateDOM(amount, data) {
     var lastUpdate = new Date(data.time_last_update_unix * 1000),
-        options = {hour: 'numeric', minute: '2-digit', day: '2-digit', month: 'long', year: 'numeric', timeZoneName: 'short' },
-        conversions = data.conversion_rates;
+        options = {hour: 'numeric', minute: '2-digit', day: '2-digit', month: 'long', year: 'numeric', timeZoneName: 'short' };
+    var conversions = data.conversion_rates;
     document.querySelector('#results').innerHTML = ''; 
     document.querySelector('#results').style.backgroundColor = 'rgba(255, 255, 255, 0.521)';
     document.querySelector('#update-date').innerHTML = 'As of ' + lastUpdate.toLocaleDateString('en-US',options);
@@ -118,11 +113,7 @@ function filterResults(){
     var filter = document.querySelector('#filter').value.toLowerCase(),
         symbols = document.querySelectorAll(".currency-conversion");
     for(i = 0; i < symbols.length; i++){
-        if(document.querySelectorAll(".currency-symbol")[i].textContent.toLowerCase().indexOf(filter) > -1) {
-            symbols[i].style.display = "";
-        }
-        else{
-            symbols[i].style.display = "none";
-        }
+        if(document.querySelectorAll(".currency-symbol")[i].textContent.toLowerCase().indexOf(filter) > -1) { symbols[i].style.display = ""; }
+        else{ symbols[i].style.display = "none"; }
     }
 }

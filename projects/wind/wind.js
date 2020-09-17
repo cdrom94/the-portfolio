@@ -16,6 +16,11 @@ var loader = new THREE.GLTFLoader();
 loader.load('wind/untitled4.gltf', function(gltf) {
     mesh = gltf.scene;
     mesh.position.set(-1, 1, 0);
+    mesh.receiveShadow = true;
+    mesh.children[3].material.opacity = 0.5;
+    mesh.children[3].material.color.b = 0.9;
+    mesh.children[3].material.transparent = true;
+    mesh.children[3].material.refractionRatio = 2.0;
     scene.add(mesh);
 }, function(xhr) {
         document.querySelector('#loading').innerHTML = "loading...";
