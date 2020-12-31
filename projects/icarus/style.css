@@ -1,127 +1,150 @@
 body {
-  margin: 0;
-  background-color: #96afca;
-  color: rgb(252, 246, 251);
-  font: 25px 'Michroma', sans-serif;
-  text-transform: lowercase;
-  height: 100vh;
-  width: 100%;
-  min-width: 320px;
-  overflow: hidden;
+	margin: 0;
+	background-color: #96afca;
+	color: rgb(252, 246, 251);
+	font: 25px 'Michroma', sans-serif;
+	text-transform: lowercase;
+	height: 100vh;
+	width: 100%;
+	min-width: 320px;
+	overflow: hidden;
 }
 canvas {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: fixed;
-  z-index: -1;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: -1;
 }
 body:after {
-  animation: grain 8s steps(10) infinite;
-  background-image: url(paper_1.png);
-  content: "";
-  height: 300%;
-  left: -50%;
-  opacity: 0.25;
-  position: fixed;
-  top: -110%;
-  width: 300%;
-  pointer-events: none;
+	animation: grain 8s steps(10) infinite;
+	background-image: url(paper_1.png);
+	content: '';
+	height: 300%;
+	left: -50%;
+	opacity: 0.25;
+	position: fixed;
+	top: -110%;
+	width: 300%;
+	pointer-events: none;
 }
 @keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+	10% {
+		transform: translate(-5%, -10%);
+	}
+	20% {
+		transform: translate(-15%, 5%);
+	}
+	30% {
+		transform: translate(7%, -25%);
+	}
+	40% {
+		transform: translate(-5%, 25%);
+	}
+	50% {
+		transform: translate(-15%, 10%);
+	}
+	60% {
+		transform: translate(15%, 0%);
+	}
+	70% {
+		transform: translate(0%, 15%);
+	}
+	80% {
+		transform: translate(3%, 35%);
+	}
+	90% {
+		transform: translate(-10%, 10%);
+	}
 }
 body > div {
-  position: absolute;
+	position: absolute;
 }
 div {
-  line-height: 30px;
+	line-height: 30px;
 }
 #preloader {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background-color: #96afca;
-  z-index: 20;
-  pointer-events: none;
-  text-align: center;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-color: #96afca;
+	z-index: 20;
+	pointer-events: none;
+	text-align: center;
 }
 #progress-bar {
-  width: 40%;
-  height: 10px;
-  background-color: #96afca;
-  border: 1px solid rgb(252, 246, 251);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+	width: 40%;
+	height: 10px;
+	background-color: #96afca;
+	border: 1px solid rgb(252, 246, 251);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 #progress-update {
-  height: 10px;
-  width: 10%;
-  background-color: rgb(252, 246, 251);
-  opacity: 80%;
+	height: 10px;
+	width: 10%;
+	background-color: rgb(252, 246, 251);
+	opacity: 80%;
 }
 noscript {
-  width: 75%;
-  background-color: #96afca;
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  line-height: 18px;
+	width: 75%;
+	background-color: #96afca;
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	line-height: 18px;
 }
-#date, #temperature {
-  text-align: right;
+#date,
+#temperature {
+	text-align: right;
 }
 #date {
-  bottom: 0;
-  right: 0;
+	bottom: 0;
+	right: 0;
 }
 #temperature {
-  top: 0;
-  right: 0;
+	top: 0;
+	right: 0;
 }
-#location, #coordinates {
-  text-align: left;
+#location,
+#coordinates {
+	text-align: left;
 }
 #location {
-  top: 0;
-  left: 0;
+	top: 0;
+	left: 0;
 }
 #coordinates {
-  bottom: 0;
-  left: 0;
+	bottom: 0;
+	left: 0;
 }
 #center {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 button {
-  background: none;
+	background: none;
 	color: inherit;
 	border: none;
 	padding: 0;
 	font: inherit;
 	cursor: pointer;
-  text-transform: uppercase;
-  outline-color: white;
-  font-size: 12px;
-  height: 30px;
-  width: 65px;
+	text-transform: uppercase;
+	outline-color: white;
+	font-size: 12px;
+	height: 30px;
+	width: 65px;
 }
-[id^=vol]{
-  width: 30px;
+[id^='vol'] {
+	width: 30px;
 }

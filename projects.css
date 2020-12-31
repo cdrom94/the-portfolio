@@ -1,63 +1,61 @@
 #content {
-    font-family: "Helvetica",sans-serif;
-    position: absolute;
-    width: 70vw;
-    top: 18%;
-    display: inline-block;
-    visibility: hidden;
-    margin-left: 13%;
-    padding-bottom: 100px;
-    max-width: 450px;
+	font-family: 'Helvetica', sans-serif;
+	position: absolute;
+	width: 70vw;
+	top: 18%;
+	display: inline-block;
+	visibility: hidden;
+	margin-left: 13%;
+	padding-bottom: 100px;
+	max-width: 450px;
 }
 img {
-    width: 100%;
-    box-shadow: 0 15px 20px rgba(128, 128, 128, 0.178);
-    transition: transform 1s ease-out;
+	width: 100%;
+	box-shadow: 0 15px 20px rgba(128, 128, 128, 0.178);
+	transition: transform 1s ease-out;
 }
-#content>* {
-    transition: transform 1s ease-out;
-    margin-top: 50px;
+#content > * {
+	transition: transform 1s ease-out;
+	margin-top: 50px;
 }
-#content>*:hover {
-    transform: translate(5px, 5px);
+#content > *:hover {
+	transform: translate(5px, 5px);
 }
-img:hover{
-    transform: perspective(700px) rotateY(15deg);
+img:hover {
+	transform: perspective(700px) rotateY(15deg);
 }
 h2 {
-    font-size: 40px;
-    margin-top: 5px;
+	font-size: 40px;
+	margin-top: 5px;
 }
 h3 {
-    font-size: 20px;
+	font-size: 20px;
 }
 p {
-    font: 13px Courier, monospace;
-    position: inline-block;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 100;
-    margin-bottom: 4px;
-    position: relative;
+	font: 13px Courier, monospace;
+	position: inline-block;
+	text-align: left;
+	font-size: 14px;
+	font-weight: 100;
+	margin-bottom: 4px;
+	position: relative;
 }
 p.tech {
-    font-size: 15px;
-    font-weight: 800;
-    margin-bottom: 12px;
+	font-size: 15px;
+	font-weight: 800;
+	margin-bottom: 12px;
 }
-.attribution a{
-    text-decoration: underline;
+.attribution a {
+	text-decoration: underline;
 }
 .appear {
-   animation: appear 1s .3s forwards;
-   opacity: 0;
-   transform: scale(0.7); 
+	animation: appear 1s 0.3s forwards;
+	opacity: 0;
+	transform: scale(0.7);
 }
 @keyframes appear {
-    to {
-        opacity: 1;
-        transform: none;
-    }
+	to {
+		opacity: 1;
+		transform: none;
+	}
 }
-
-

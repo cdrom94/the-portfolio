@@ -7,7 +7,7 @@ function inViewport(el) {
     );
 }
 
-function pageScroll(){
+function pageScroll() {
     var projectItems = document.querySelectorAll(".tab");
     projectItems.forEach(item => inViewport(item) 
     ? item.classList.add('appear') 
