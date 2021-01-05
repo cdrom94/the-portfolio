@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script> 
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+    <style>
+      .a-loader-title {
+        color: white;
+        background-color: white;
+      }
+    </style>
+    <title>Sadia Romain | woodland</title>
+</head>
+<body>
+    <a-scene fog="type: linear; color: #AAA" 
+             loading-screen="dotsColor: darkgray; backgroundColor: white">
+      <a-assets>
+        <a-asset-item id="cloud" src="woodland/cloud.gltf"></a-asset-item>
+        <a-asset-item id="giraffe" src="woodland/giraffeanimation.gltf"></a-asset-item>
+        <a-asset-item id="sign" src="woodland/sign.gltf"></a-asset-item>
+        <audio src="woodland/Alesis-Fusion-Whistle-C6.wav" id="drum1" preload></audio>
+        <audio src="woodland/Chirping-Birds.wav" id="drum2" preload></audio>
+        <audio src="woodland/Monkey-Screech.wav" id="drum3" preload></audio>
+        <audio src="woodland/Lion-Roar.wav" id="drum4" preload></audio>
+        <audio src="woodland/Water-Drop.wav" id="drum5" preload></audio>
+      </a-assets>  
+      <a-sound src="src: url(woodland/sounds.wav)" 
+               autoplay="true" 
+               positional="false" 
+               loop="true" 
+               volume="0.15"></a-sound>
+      <a-entity environment="preset: forest; fog: 0.66; dressing: trees; dressingAmount: 400; ground: flat"></a-entity>
+      <a-entity environment="preset: starry; fog: 0.66; dressing: trees; ground: none; grid: none; groundTexture:  walkernoise;  dressing:  stones;  dressingAmount:  25;  active:  true;  skyType:  atmosphere; flatShading: true"></a-entity>
+
+      <!-- GLTF models -->
+      <a-entity gltf-model="#cloud" 
+                position="5 12 -28" 
+                scale="0.75 0.75 0.75"></a-entity>
+      <a-entity gltf-model="#cloud" 
+                position="10 18 -32"></a-entity>
+      <a-entity gltf-model="#cloud" 
+                position="-10 9 -28"></a-entity>
+      <a-entity gltf-model="#sign" 
+                position="0 5 -6" 
+                scale="2 2 2" 
+                rotation="10 0 0"></a-entity>
+      <a-entity gltf-model="#giraffe" 
+                position="3 0 -4" 
+                rotation="0 230 0" 
+                animation-mixer></a-entity>
+
+      <!-- Drums -->
+      <a-entity class="drums"
+                geometry="primitive: cylinder; height: 0.1; radius: 0.3" 
+                position="-1.5 0.7 0" 
+                rotation="25 0 0" 
+                sound="src: #drum1; volume: 1; on: click"
+                play-sound-on-event="mode: toggle-stop; event: click"
+                material=" transparent:  true;  opacity: 0.8; color: lightgray"></a-entity>
+      <a-entity class="drums"
+                geometry="primitive: cylinder; height: 0.1; radius: 0.3" 
+                position="-0.75 0.9 -0.1"  
+                rotation="25 0 0"
+                sound="src: #drum2; volume: 1; on: click"
+                play-sound-on-event="mode: toggle-stop; event: click"
+                material=" transparent:  true;  opacity: 0.8; color: lightgray"></a-entity>
+      <a-entity class="drums"
+                geometry="primitive: cylinder; height: 0.1; radius: 0.3" 
+                position="0 1 -0.2"  
+                rotation="25 0 0"
+                sound="src: #drum3; volume: 1; on: click"
+                play-sound-on-event="mode: toggle-stop; event: click"
+                material=" transparent:  true;  opacity: 0.8; color:lightgray"></a-entity>
+      <a-entity class="drums"
+                geometry="primitive: cylinder; height: 0.1; radius: 0.3" 
+                position="0.75 0.9 -0.1"  
+                rotation="25 0 0"
+                sound="src: #drum4; volume: 1; on: click"
+                play-sound-on-event="mode: toggle-stop; event: click"
+                material=" transparent:  true;  opacity: 0.8; color:lightgray"></a-entity>
+      <a-entity class="drums"
+                geometry="primitive: cylinder; height: 0.1; radius: 0.3" 
+                position="1.5 0.7 0"  
+                rotation="25 0 0"
+                sound="src: #drum5; volume: 1; on: click"
+                play-sound-on-event="mode: toggle-stop; event: click"
+                material=" transparent:  true;  opacity: 0.8; color:lightgray"></a-entity>
+      
+      <!-- Camera and Raycaster -->
+      <a-entity camera="" 
+                position="0 1.6 60.603872545762849" 
+                animation="property: position; to: 0 1.6 2.603872545762849; dur: 15000; easing: easeOutQuart; loop: false" 
+                wasd-controls="" 
+                rotation="" 
+                look-controls="" 
+                aframe-injected="" 
+                data-aframe-inspector-original-camera="">
+                <a-cursor raycaster="objects: .drums" 
+                          position="0 0 -0.3"
+                          material="color:gray"
+                          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+                          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+                          geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005"
+                          event-set__mouseenter="_event: mouseenter; color: orange"
+                          event-set__mouseleave="_event: mouseleave; color: gray">
+                </a-cursor>
+      </a-entity>
+    </a-scene>
+</body>
+</html>
