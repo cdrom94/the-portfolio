@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="The Kurrenci app, powered by ExchangeRate-API, exports up to 50 indicative currency conversions per input.">
-    <link rel="shortcut icon" href="kurrenci/kurrenci_favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="kurrenci/kurrenci.css">
     <title>Sadia Romain | Kurrenci</title>
 </head>
@@ -22,6 +22,7 @@
         </select>
         <label for=""></label>
         <button type="submit" onclick="conversion()">Convert</button>
+        <!-- <div id="loader"></div> -->
         <p id="update-date"></p>
         <label for="amount" id="label-filter">Filter...</label>
         <input id="filter" type="text" onkeyup="filterResults()" placeholder="Filter..." oninput="showLabel('#label-filter', '#filter')">
