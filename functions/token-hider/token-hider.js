@@ -5,7 +5,7 @@ exports.handler = (event, context, callback) => {
   const { API_URL, API_TOKEN } = process.env
   const URL = `${API_URL}/${API_TOKEN}/latest/${API_PARAMS}`
 
-  const pass = (body) => {callback( null, {
+  const pass = body => {callback( null, {
     statusCode: 200,
     body: JSON.stringify(body)
   })}
@@ -16,7 +16,5 @@ exports.handler = (event, context, callback) => {
     .catch(err => console.log(err))
   }
 
-  if(event.httpMethod == 'GET'){
-    get()
-  };
+  if(event.httpMethod == 'GET') get()
 };
