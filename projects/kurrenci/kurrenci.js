@@ -179,10 +179,11 @@ var currencyObj = {
 dropdownObj(currencyObj);
 
 function conversion() {
+    document.querySelector('#loader').style.display = 'block';
     var amount = document.querySelector('#amount').value;
     var currency = document.querySelector('#currency').value;
 
-    fetch( `/.netlify/functions/token-hider/?currency=${currency}` )
+    fetch( `/.netlify/functions/token-hider/?currency=${currency}`)
         .then(response => response.json())
         .then(data => updateDOM(amount, data))
         .catch(err => document.querySelector('#results').innerHTML = 'Sorry. There was an error, please try again later.')
@@ -221,6 +222,7 @@ function updateDOM(amount, data) {
         document.querySelector('#results').appendChild(newConversion);
         document.querySelector("#filter").style.display = "block";
     }
+    document.querySelector('#loader').style.display = 'none';
 }
 function filterResults(){
     var filter = document.querySelector('#filter').value.toLowerCase();
