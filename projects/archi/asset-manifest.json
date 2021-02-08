@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/projects/archi/static/css/main.b771c5e9.chunk.css",
-    "main.js": "/projects/archi/static/js/main.788b4c40.chunk.js",
-    "main.js.map": "/projects/archi/static/js/main.788b4c40.chunk.js.map",
+    "main.css": "/projects/archi/static/css/main.61b76667.chunk.css",
+    "main.js": "/projects/archi/static/js/main.72642c14.chunk.js",
+    "main.js.map": "/projects/archi/static/js/main.72642c14.chunk.js.map",
     "runtime-main.js": "/projects/archi/static/js/runtime-main.526856fa.js",
     "runtime-main.js.map": "/projects/archi/static/js/runtime-main.526856fa.js.map",
     "static/js/2.ae11f141.chunk.js": "/projects/archi/static/js/2.ae11f141.chunk.js",
     "static/js/2.ae11f141.chunk.js.map": "/projects/archi/static/js/2.ae11f141.chunk.js.map",
     "index.html": "/projects/archi/index.html",
-    "precache-manifest.918884115c12d754af1ca688449b345e.js": "/projects/archi/precache-manifest.918884115c12d754af1ca688449b345e.js",
+    "precache-manifest.324b8dd54d385efd3916570e79bb1278.js": "/projects/archi/precache-manifest.324b8dd54d385efd3916570e79bb1278.js",
     "service-worker.js": "/projects/archi/service-worker.js",
-    "static/css/main.b771c5e9.chunk.css.map": "/projects/archi/static/css/main.b771c5e9.chunk.css.map",
+    "static/css/main.61b76667.chunk.css.map": "/projects/archi/static/css/main.61b76667.chunk.css.map",
     "static/js/2.ae11f141.chunk.js.LICENSE.txt": "/projects/archi/static/js/2.ae11f141.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.526856fa.js",
     "static/js/2.ae11f141.chunk.js",
-    "static/css/main.b771c5e9.chunk.css",
-    "static/js/main.788b4c40.chunk.js"
+    "static/css/main.61b76667.chunk.css",
+    "static/js/main.72642c14.chunk.js"
   ]
 }

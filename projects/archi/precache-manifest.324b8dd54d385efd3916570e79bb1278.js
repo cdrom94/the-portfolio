@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53b003bfacd088a2f9fb234889edaf8f",
+    "revision": "13541625cea9a65ec0c9a0e28ec53e18",
     "url": "/projects/archi/index.html"
   },
   {
-    "revision": "4231fcc4610c6f1dd4bf",
-    "url": "/projects/archi/static/css/main.b771c5e9.chunk.css"
+    "revision": "45b38267b5427d45781e",
+    "url": "/projects/archi/static/css/main.61b76667.chunk.css"
   },
   {
     "revision": "cbe301f320821afe5a89",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/archi/static/js/2.ae11f141.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4231fcc4610c6f1dd4bf",
-    "url": "/projects/archi/static/js/main.788b4c40.chunk.js"
+    "revision": "45b38267b5427d45781e",
+    "url": "/projects/archi/static/js/main.72642c14.chunk.js"
   },
   {
     "revision": "51fd6cbc79e02ea6eefb",
