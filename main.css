@@ -19,7 +19,7 @@ h1 {
 	color: black;
 	z-index: 20;
 }
-h1 > [href='index'] {
+h1 > [href="index"] {
 	background: linear-gradient(90deg, white, white 75%, rgba(255, 255, 255, 0));
 	height: 36px;
 	width: 70px;
@@ -60,7 +60,7 @@ nav a {
 }
 /* Animated effect on nav tabs */
 nav a::before {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 90%;
 	transform: scaleX(0);
@@ -111,7 +111,7 @@ ul#post-it li {
 	box-shadow: 0 1px 4px #b8e75b, 0 0 40px rgba(244, 247, 243, 0.555) inset;
 }
 ul#post-it li:hover::after {
-	content: '';
+	content: "";
 	z-index: -1;
 	position: absolute;
 	right: 10px;
@@ -140,7 +140,7 @@ ul#post-it li:hover::after {
 /* Main title */
 .name-title {
 	width: 200px;
-	font: italic 4vw Arial, sans-serif;
+	font: italic 3.125rem Arial, sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 	position: relative;
@@ -160,20 +160,12 @@ ul#post-it li:hover::after {
 }
 /* Highlight coloring on nav tabs */
 #highlight-blue a::before {
-	background: linear-gradient(
-		45deg,
-		rgb(0, 238, 255) 65%,
-		rgb(0, 140, 255) 100%
-	);
+	background: linear-gradient(45deg, rgb(0, 238, 255) 65%, rgb(0, 140, 255) 100%);
 }
 /* PROJECTS PAGE */
 /* Highlight coloring on nav tabs */
 #hightlight-yellow a::before {
-	background: linear-gradient(
-		45deg,
-		rgb(229, 255, 0) 65%,
-		rgb(179, 255, 0) 100%
-	);
+	background: linear-gradient(45deg, rgb(229, 255, 0) 65%, rgb(179, 255, 0) 100%);
 }
 /* CONTACT PAGE */
 #form-heading {
@@ -224,7 +216,7 @@ form input {
 	height: 30px;
 	float: right;
 	border: none;
-	font-size: 16px;
+	font-size: 1rem;
 	border-bottom: 1px solid gray;
 }
 form textarea,
@@ -254,7 +246,7 @@ form button:hover {
 		display: block;
 		width: 60%;
 		height: 70%;
-		font-size: 16px;
+		font-size: 1rem;
 	}
 	form p,
 	form input,
@@ -273,18 +265,10 @@ form button:hover {
 }
 /* Highlight coloring on nav tabs */
 #hightlight-pink a::before {
-	background: linear-gradient(
-		45deg,
-		rgb(240, 118, 213) 65%,
-		rgb(255, 6, 143) 100%
-	);
+	background: linear-gradient(45deg, rgb(240, 118, 213) 65%, rgb(255, 6, 143) 100%);
 }
 /* SUCCESS PAGE */
 /* Highlight coloring on nav tabs */
 #highlight-orange a::before {
-	background: linear-gradient(
-		45deg,
-		rgb(255, 191, 0) 65%,
-		rgb(255, 103, 0) 100%
-	);
+	background: linear-gradient(45deg, rgb(255, 191, 0) 65%, rgb(255, 103, 0) 100%);
 }

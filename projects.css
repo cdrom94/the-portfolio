@@ -25,23 +25,23 @@ img:hover {
 	transform: perspective(700px) rotateY(15deg);
 }
 h2 {
-	font-size: 40px;
+	font-size: 2.5rem;
 	margin-top: 5px;
 }
 h3 {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 p {
 	font: 13px Courier, monospace;
 	position: inline-block;
 	text-align: left;
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-weight: 100;
 	margin-bottom: 4px;
 	position: relative;
 }
 p.tech {
-	font-size: 15px;
+	font-size: 0.9375rem;
 	font-weight: 800;
 	margin-bottom: 12px;
 }
