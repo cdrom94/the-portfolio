@@ -5,5 +5,3 @@ Disallow: /nogooglebot/
 # Group 2
 User-agent: *
 Allow: /
-
-Sitemap: http://www.example.com/sitemap.xml
