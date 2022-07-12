@@ -16,16 +16,12 @@ h1 {
 	color: hsl(222, 37%, 25%);
 }
 
-div {
+div#underline {
 	width: 150px;
 	height: 8px;
 	margin-left: 5px;
 	margin-top: -20px;
-	background-image: linear-gradient(
-		to left,
-		rgba(196, 254, 103, 0.5),
-		hsl(222, 100%, 85%)
-	);
+	background-image: linear-gradient(to left, rgba(196, 254, 103, 0.5), hsl(222, 100%, 85%));
 }
 
 svg {
