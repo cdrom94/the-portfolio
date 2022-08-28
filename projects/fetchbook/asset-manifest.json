@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/projects/fetchbook/static/css/main.58fb1382.chunk.css",
+    "main.js": "/projects/fetchbook/static/js/main.ed6abbaa.chunk.js",
+    "main.js.map": "/projects/fetchbook/static/js/main.ed6abbaa.chunk.js.map",
+    "runtime-main.js": "/projects/fetchbook/static/js/runtime-main.ce887126.js",
+    "runtime-main.js.map": "/projects/fetchbook/static/js/runtime-main.ce887126.js.map",
+    "static/js/2.8fc9a845.chunk.js": "/projects/fetchbook/static/js/2.8fc9a845.chunk.js",
+    "static/js/2.8fc9a845.chunk.js.map": "/projects/fetchbook/static/js/2.8fc9a845.chunk.js.map",
+    "index.html": "/projects/fetchbook/index.html",
+    "static/css/main.58fb1382.chunk.css.map": "/projects/fetchbook/static/css/main.58fb1382.chunk.css.map",
+    "static/js/2.8fc9a845.chunk.js.LICENSE.txt": "/projects/fetchbook/static/js/2.8fc9a845.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce887126.js",
+    "static/js/2.8fc9a845.chunk.js",
+    "static/css/main.58fb1382.chunk.css",
+    "static/js/main.ed6abbaa.chunk.js"
+  ]
+}

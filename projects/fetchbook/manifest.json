@@ -1,0 +1,12 @@
+{
+  "short_name": "Fetchbook",
+  "name": "Dog Breed Classifier",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
