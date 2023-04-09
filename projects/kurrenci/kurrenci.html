@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="The Kurrenci app, powered by ExchangeRate-API, exports up to 50 indicative currency conversions per input." />
+		<link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="kurrenci.css" />
+		<title>Sadia Romain | kurrenci;</title>
+	</head>
+	<body>
+		<noscript>
+			<p>JavaScript is required to access this app! Refresh with JavaScript enabled.</p>
+		</noscript>
+		<h1 class="column">kurr<br />enci</h1>
+		<section class="column">
+			<label for="amount" id="label-amount">Amount</label>
+			<input type="number" name="amount" id="amount" placeholder="   Amount" oninput="showLabel('#label-amount', '#amount')" />
+			<label for="currency" id="label-currency">Currency</label>
+			<select id="currency" onclick="showLabel('#label-currency', '#currency')">
+				<option id="default-option" value="1" selected="" hidden="" disabled="">CURRENCY</option>
+			</select>
+			<label for=""></label>
+			<button type="submit" onclick="conversion()">Convert</button>
+			<div id="loader"></div>
+			<p id="update-date"></p>
+			<label for="amount" id="label-filter">Filter...</label>
+			<input id="filter" type="text" onkeyup="filterResults()" placeholder="Filter..." oninput="showLabel('#label-filter', '#filter')" />
+		</section>
+		<div class="column" id="results"></div>
+		<img id="wave" src="kurrenci_wave.svg" alt="" />
+		<img id="koi" src="kurrenci_koi.png" alt="" />
+		<script type="module" src="kurrenci.js"></script>
+	</body>
+</html>
