@@ -145,6 +145,6 @@ button {
 	height: 30px;
 	width: 65px;
 }
-[id^='vol'] {
+.volume-control {
 	width: 30px;
 }

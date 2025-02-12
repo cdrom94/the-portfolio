@@ -28,10 +28,24 @@
   <div id="center">
     <div id="current-weather" title="current weather"></div>
     <audio preload loop type="audio/mpeg" src="icarus/8daudio.mp3"></audio>
-    <div>
-      <button aria-label="volume up" id="volume-up" title="volume up">+</button>
+			<div id="volume-controls">
+				<button
+					aria-label="volume down"
+					id="volume-down"
+					class="volume-control"
+					title="volume down"
+				>
+					-
+				</button>
       <button aria-label="toggle pause play" id="toggle" title="switch">play</button>
-      <button aria-label="volume down" id="volume-down" title="volume down">-</button>
+				<button
+					aria-label="volume up"
+					id="volume-up"
+					class="volume-control"
+					title="volume up"
+				>
+					+
+				</button>
     </div> 
   </div>
   <div id="date">
