@@ -39,7 +39,7 @@ const info = () => {
 };
 
 const weatherCall = (lat, lon) => {
-	fetch('https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&lon=' + lon)
+	fetch(`https://weather-proxy.freecodecamp.rocks/api/current?lat=${lat}&lon=${lon}`)
 		.then(response => {
 			return response.json();
 		})
