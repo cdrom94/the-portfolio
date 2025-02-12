@@ -52,6 +52,7 @@ const init = () => {
 		stopAnimation();
 	});
 };
+
 const onWindowResize = () => {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
@@ -60,23 +61,26 @@ const onWindowResize = () => {
 
 window.addEventListener('resize', onWindowResize, false);
 
-const playAnimation = () => {
-	renderer.setAnimationLoop(() => {
-		update(0.0003);
-		render();
-	});
-};
-const stopAnimation = () => {
-	renderer.setAnimationLoop(() => {
-		update(0);
-		render();
-	});
-};
 const particleUpdate = rotate => {
 	cloudParticles.forEach(p => {
 		p.rotation.z -= rotate;
 	});
 };
+
+const playAnimation = () => {
+	renderer.setAnimationLoop(() => {
+		particleUpdate(0.0005);
+		render();
+	});
+};
+
+const stopAnimation = () => {
+	renderer.setAnimationLoop(() => {
+		particleUpdate(0);
+		render();
+	});
+};
+
 const render = () => {
 	renderer.render(scene, camera);
 };

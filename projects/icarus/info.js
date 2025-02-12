@@ -1,6 +1,6 @@
 const load = () => {
 	info();
-	// init();
+	init();
 	let i = 0;
 	if (i === 0) {
 		i = 1;
@@ -32,7 +32,8 @@ const info = () => {
 	};
 	const error = err => {
 		let message = ['geolocation denied.', 'position unavailable.', 'timeout.'];
-		document.querySelector('#current-weather').innerHTML = err.code + ': ' + message[err.code - 1] + "<br/> That's cool. A window works too.";
+		document.querySelector('#current-weather').innerHTML =
+			err.code + ': ' + message[err.code - 1] + "<br/> That's cool. A window works too.";
 		document.querySelector('#current-weather').style.textAlign = 'left';
 	};
 	navigator.geolocation.getCurrentPosition(success, error);
@@ -47,7 +48,8 @@ const weatherCall = (lat, lon) => {
 			updateDOM(lat, lon, data);
 		})
 		.catch(() => {
-			document.querySelector('#current-weather').innerHTML = 'Sorry. There was an error, please try again later.';
+			document.querySelector('#current-weather').innerHTML =
+				'Sorry. There was an error, please try again later.';
 		});
 };
 
