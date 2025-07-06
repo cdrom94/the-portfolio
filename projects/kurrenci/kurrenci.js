@@ -82,7 +82,7 @@ let currencyObj = {
 	IQD: { name: "Iraqi Dinar", region: "Iraq" },
 	IRR: { name: "Iranian Rial", region: "Iran" },
 	ISK: { name: "Icelandic Króna", region: "Iceland" },
-	JEP: { name: "Jersey Pound", regoin: "Jersey" },
+	JEP: { name: "Jersey Pound", region: "Jersey" },
 	JMD: { name: "Jamaican Dollar", region: "Jamaica" },
 	JOD: { name: "Jordanian Dinar", region: "Jordan" },
 	JPY: { name: "Japanese Yen", region: "Japan" },
@@ -170,6 +170,7 @@ let currencyObj = {
 	WST: { name: "Samoan Tālā", region: "Samoa" },
 	XAF: { name: "Central African CFA Franc", region: "CEMAC" },
 	XCD: { name: "East Caribbean Dollar", region: "Organisation of Eastern Caribbean States" },
+	XCG: { name: "Caribbean Guilder", region: "Curaçao and Sint Maarten" },
 	XDR: { name: "Special Drawing Rights", region: "International Monetary Fund" },
 	XOF: { name: "West African CFA franc", region: "CFA" },
 	XPF: { name: "CFP Franc", region: "Collectivités d'Outre-Mer" },
@@ -219,30 +220,34 @@ const updateDOM = (amount, data) => {
 		"As of " + lastUpdate.toLocaleDateString("en-US", options);
 
 	for (let conv in conversions) {
-		let newConversion = document.createElement("div");
-		let newCurrency = document.createElement("p");
-		let newExchange = document.createElement("p");
-		let currencyOptions = { style: "currency", currency: conv, currencyDisplay: "symbol" };
-		let conversion;
+		if (currencyObj[conv]) {
+			let newConversion = document.createElement("div");
+			let newCurrency = document.createElement("p");
+			let newExchange = document.createElement("p");
+			let currencyOptions = { style: "currency", currency: conv, currencyDisplay: "symbol" };
+			let conversion;
 
-		if (conv === "DKK" || conv === "NOK" || conv === "SEK") {
-			conversion = (conversions[conv] * amount).toFixed(2) + " kr";
-		} else {
-			conversion = new Intl.NumberFormat("en-US", currencyOptions).format(
-				conversions[conv] * amount
-			);
+			if (conv === "DKK" || conv === "NOK" || conv === "SEK") {
+				conversion = (conversions[conv] * amount).toFixed(2) + " kr";
+			} else if (conv === "XCG") {
+				conversion = conversions[conv] * amount + " Cg";
+			} else {
+				conversion = new Intl.NumberFormat("en-US", currencyOptions).format(
+					conversions[conv] * amount
+				);
+			}
+
+			newCurrency.innerHTML = currencyObj[conv].name + " (" + conv + ")";
+			newExchange.innerHTML = conversion;
+			newConversion.id = conv;
+			newConversion.className = "currency-conversion";
+			newCurrency.className = "currency-symbol";
+			newExchange.className = "currency-exchange";
+			newConversion.appendChild(newCurrency);
+			newConversion.appendChild(newExchange);
+			document.querySelector("#results").appendChild(newConversion);
+			document.querySelector("#filter").style.display = "block";
 		}
-
-		newCurrency.innerHTML = currencyObj[conv].name + " (" + conv + ")";
-		newExchange.innerHTML = conversion;
-		newConversion.id = conv;
-		newConversion.className = "currency-conversion";
-		newCurrency.className = "currency-symbol";
-		newExchange.className = "currency-exchange";
-		newConversion.appendChild(newCurrency);
-		newConversion.appendChild(newExchange);
-		document.querySelector("#results").appendChild(newConversion);
-		document.querySelector("#filter").style.display = "block";
 	}
 	document.querySelector("#loader").style.display = "none";
 };
