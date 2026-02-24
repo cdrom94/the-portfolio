@@ -10,7 +10,9 @@ function draw() {
 	frameRate(30);
 	translate(-width / 2, -height / 2);
 
-	trail.push([mouseX, mouseY]);
+	if (mouseX !== 0 || mouseY !== 0) {
+		trail.push([pmouseX, pmouseY]);
+	}
 
 	if (trail.length > 15) {
 		trail.shift();
