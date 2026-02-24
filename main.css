@@ -55,11 +55,11 @@ h1 > [href="index"] {
 h1 a:hover {
 	color: rgb(203, 203, 203);
 }
+
 /*Nav tabs*/
 nav {
 	position: fixed;
 	text-transform: uppercase;
-	font-size: 0;
 	font-weight: 100;
 	letter-spacing: 3px;
 	color: rgb(45, 45, 46);
@@ -82,6 +82,15 @@ nav::-webkit-scrollbar {
 nav {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+nav::after {
+	content: "";
+	background-image: linear-gradient(white 30%, rgba(0, 0, 0, 0));
+	height: 40px;
+	width: 100%;
+	display: block;
+	position: fixed;
 }
 
 nav a {
